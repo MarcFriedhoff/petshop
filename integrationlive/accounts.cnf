@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.data.ISMemDataImpl">
+    <record name="default" javaclass="com.wm.data.ISMemDataImpl">
+      <value name="alias">default</value>
+      <jboolean name="isEnabled">true</jboolean>
+      <value name="username">insrsa</value>
+      <value name="pswdHandle">&amp;009Manage009&amp;</value>
+      <value name="iLiveURL">https://insrsaeu.int-aws-de.webmethods.io/</value>
+      <value name="umURL">nhps://um.int-aws-de.webmethods.io:443//um01/,nhps://um.int-aws-de.webmethods.io:443//um02/,nhps://um.int-aws-de.webmethods.io:443//um03/</value>
+	  <jboolean name="authenticate">true</jboolean>
+      <array name="stages" type="record" depth="1">
+        <record javaclass="com.wm.data.ISMemDataImpl">
+          <value name="stageName">stage00</value>
+          <value name="stageDisplayName">Development</value>
+          <value name="umURL">nhps://um.int-aws-de.webmethods.io:443//um01/,nhps://um.int-aws-de.webmethods.io:443//um02/,nhps://um.int-aws-de.webmethods.io:443//um03/</value>
+        </record>
+      </array>
+      <record name="queueNames" javaclass="com.wm.data.ISMemDataImpl">
+        <value name="fromOnPremiseQueueName">1794549115_from_on_premise</value>
+        <value name="toOnPremiseQueueName">1794549115_to_on_premise</value>
+      </record>
+      <record name="queues" javaclass="com.wm.data.ISMemDataImpl">
+        <value name="fromOnPremiseQueueName">1794549115_from_on_premise</value>
+        <value name="toOnPremiseQueueName">1794549115_to_on_premise</value>
+      </record>
+      <value name="tenantId">1794549115</value>
+    </record>
+  </record>
+</IDataXMLCoder>
