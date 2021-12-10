@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: petshop-inventory-deployment
+  namespace: default
+  labels:
+    app: petshop-inventory
+spec:
+  selector:
+    matchLabels:
+      app: petshop-inventory
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: petshop-inventory
+    spec:
+      hostname: petshop-inventory
+      containers:
+      - name: petshop-inventory
+        image: eastendboys.azurecr.io/petshop-inventory:1.0.0.2
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5555
+          name: petshopport
+      initContainers:
+      - name: petshop-inventory-db
+        image: eastendboys.azurecr.io/petshop-inventory-db:1.0.0.6
+        env:
+          - name: URL
+            value: "jdbc:postgresql://pet-postgres-postgresql/petdb"
+          - name: USERNAME
+            value: "postgres"
+          - name: PASSWORD
+            value: "hello"
+      imagePullSecrets:
+      - name: regcred

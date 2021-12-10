@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: petshop-inventory-svc
+  namespace: default
+  labels:
+    app: petshop-inventory-svc
+spec:
+  type: LoadBalancer
+  selector:
+    app: petshop-inventory
+  ports:
+  - protocol: TCP
+    port: 5556
+    targetPort: petshopport
