@@ -4,8 +4,8 @@
   <record javaclass="com.wm.data.ISMemDataImpl">
     <value name="name">Srini_OP</value>
     <value name="description">Srini_OP</value>
-    <number name="lastUploadedTime" type="java.lang.Long">1639133678901</number>
-    <number name="lastSavedTime" type="java.lang.Long">1639138448686</number>
+    <number name="lastUploadedTime" type="java.lang.Long">1639140716412</number>
+    <number name="lastSavedTime" type="java.lang.Long">1639140718914</number>
     <array name="packages" type="record" depth="1">
       <record javaclass="com.wm.data.ISMemDataImpl">
         <value name="package">Devtest</value>
@@ -56,7 +56,7 @@
     </array>
     <array name="connections" type="record" depth="1">
       <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="connectionName">Srini_OP_IS</value>
+        <value name="connectionName">Srini_OP_IS_2</value>
         <value name="connectionStage">stage00</value>
         <value name="tenantAlias">default</value>
       </record>
