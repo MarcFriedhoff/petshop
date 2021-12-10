@@ -5,9 +5,9 @@
     <array name="IntegrationLiveConnections" type="record" depth="1">
       <record javaclass="com.wm.data.ISMemDataImpl">
         <value name="tenantAlias">default</value>
-        <value name="lastUploadedTimeStr">2021-10-27 11:13:04 GMT</value>
+        <value name="lastUploadedTimeStr">2021-12-10 11:54:40 CET</value>
         <jboolean name="uploadPending">false</jboolean>
-        <value name="aliasName">Srini_OP_docker</value>
+        <value name="aliasName">Srini_OP_IS</value>
         <value name="description"></value>
         <value name="stage">stage00</value>
         <value name="stageDisplay">Development</value>
@@ -17,18 +17,18 @@
         <number name="windowSize" type="java.lang.Integer">5</number>
         <number name="retry" type="java.lang.Long">5</number>
         <value name="runAsUser">Administrator</value>
-        <jboolean name="isEnabled">true</jboolean>
+        <jboolean name="isEnabled">false</jboolean>
         <record name="properties" javaclass="com.wm.data.ISMemDataImpl">
         </record>
-        <number name="lastUploadedTime" type="java.lang.Long">1635333184625</number>
-        <number name="lastSavedTime" type="java.lang.Long">1635333150580</number>
+        <number name="lastUploadedTime" type="java.lang.Long">1639133680776</number>
+        <number name="lastSavedTime" type="java.lang.Long">1635318544177</number>
         <number name="timeToLive" type="java.lang.Long">60000</number>
         <number name="timeToLiveCache" type="java.lang.Long">60</number>
-        <value name="keyStoreAlias"></value>
+        <null name="keyStoreAlias"/>
         <null name="keyAlias"/>
-        <value name="trustStoreAlias"></value>
+        <null name="trustStoreAlias"/>
       </record>
     </array>
-    <number name="lastSavedTime" type="java.lang.Long">1635333184627</number>
+    <number name="lastSavedTime" type="java.lang.Long">1639133680787</number>
   </record>
 </IDataXMLCoder>

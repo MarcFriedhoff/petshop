@@ -5,11 +5,11 @@
     <record name="default" javaclass="com.wm.data.ISMemDataImpl">
       <value name="alias">default</value>
       <jboolean name="isEnabled">true</jboolean>
-      <value name="username">insrsa</value>
-      <value name="pswdHandle">&amp;009Manage009&amp;</value>
+      <value name="username">srinivasan.sabapathy@softwareag.com</value>
+      <value name="pswdHandle">wm.is.admin.ilive.srinivasan.sabapathy@softwareag.com.default</value>
       <value name="iLiveURL">https://insrsaeu.int-aws-de.webmethods.io/</value>
       <value name="umURL">nhps://um.int-aws-de.webmethods.io:443//um01/,nhps://um.int-aws-de.webmethods.io:443//um02/,nhps://um.int-aws-de.webmethods.io:443//um03/</value>
-	  <jboolean name="authenticate">true</jboolean>
+      <jboolean name="authenticate">true</jboolean>
       <array name="stages" type="record" depth="1">
         <record javaclass="com.wm.data.ISMemDataImpl">
           <value name="stageName">stage00</value>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.data.ISMemDataImpl">
+    <value name="name">Srini_OP</value>
+    <value name="description">Srini_OP</value>
+    <number name="lastUploadedTime" type="java.lang.Long">1639133678901</number>
+    <number name="lastSavedTime" type="java.lang.Long">1639138448686</number>
+    <array name="packages" type="record" depth="1">
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="package">Devtest</value>
+        <array name="details" type="record" depth="1">
+          <record javaclass="com.wm.data.ISMemDataImpl">
+            <value name="serviceName">DevTest.OnPrem:service</value>
+            <value name="displayName">service</value>
+            <jboolean name="isShared">true</jboolean>
+            <jboolean name="useBatch">false</jboolean>
+          </record>
+        </array>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="package">Petshop_EEBoys</value>
+        <array name="details" type="record" depth="1">
+          <record javaclass="com.wm.data.ISMemDataImpl">
+            <value name="serviceName">Petshop_EEBoys.adapterWrappers:createPet</value>
+            <value name="displayName">createPet</value>
+            <jboolean name="isShared">true</jboolean>
+            <jboolean name="useBatch">false</jboolean>
+          </record>
+          <record javaclass="com.wm.data.ISMemDataImpl">
+            <value name="serviceName">Petshop_EEBoys.adapterWrappers:getCustomers</value>
+            <value name="displayName">getCustomers</value>
+            <jboolean name="isShared">true</jboolean>
+            <jboolean name="useBatch">true</jboolean>
+          </record>
+          <record javaclass="com.wm.data.ISMemDataImpl">
+            <value name="serviceName">Petshop_EEBoys.adapterWrappers:getPetById</value>
+            <value name="displayName">getPetById</value>
+            <jboolean name="isShared">true</jboolean>
+            <jboolean name="useBatch">false</jboolean>
+          </record>
+          <record javaclass="com.wm.data.ISMemDataImpl">
+            <value name="serviceName">Petshop_EEBoys.adapterWrappers:getPets</value>
+            <value name="displayName">getPets</value>
+            <jboolean name="isShared">true</jboolean>
+            <jboolean name="useBatch">true</jboolean>
+          </record>
+          <record javaclass="com.wm.data.ISMemDataImpl">
+            <value name="serviceName">Petshop_EEBoys.adapterWrappers:getPetsByStatus</value>
+            <value name="displayName">getPetsByStatus</value>
+            <jboolean name="isShared">true</jboolean>
+            <jboolean name="useBatch">true</jboolean>
+          </record>
+        </array>
+      </record>
+    </array>
+    <array name="connections" type="record" depth="1">
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="connectionName">Srini_OP_IS</value>
+        <value name="connectionStage">stage00</value>
+        <value name="tenantAlias">default</value>
+      </record>
+    </array>
+    <array name="tenantAliases" type="record" depth="1">
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="tenantAlias">default</value>
+      </record>
+    </array>
+  </record>
+</IDataXMLCoder>
