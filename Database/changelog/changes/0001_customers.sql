@@ -1,3 +1,5 @@
+--liquibase formatted sql
+--changeset srini:create-multiple-tables splitStatements:true endDelimiter:;
 INSERT INTO "PetShop_EEBoys"."PetShop_EEBoys.Customer" (
 "custId", "Name", "Email") VALUES (
 '1'::bigint, 'Srini'::text, 'srini@sag.com'::text);
