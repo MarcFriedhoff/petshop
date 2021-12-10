@@ -5,41 +5,36 @@ const Home = () => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [inventory, setInventory] = useState([]);
-    const [newPetName, setNewPetName] = useState("Doggy");
-    const [newPetId, setNewPetId] = useState(Math.floor(Math.random() * 1048576).toString());
-    const [newCategoryName, setNewCategoryName] = useState("Dog");
-    const [newCategoryId, setNewCategoryId] = useState(Math.floor(Math.random() * 1048576).toString());
-    const [newPetStatus, setNewPetStatus] = useState("available");
+    const [newPet, setNewPet] = useState({
+        "id": Math.floor(Math.random() * 1048576).toString(),
+        "name": "Doggy",
+        "photoUrls": [],
+        "status": "available"
+    });
+    const [newCategory, setNewCategory] = useState({
+        "id": Math.floor(Math.random() * 1048576).toString(),
+        "name": "Dog"
+    });
     const [currencyConverter, setCurrencyConverter] = useState({ "fromCurrency": "EUR", "toCurrency": "USD", "value": "126.32" });
 
-    function handlePetNameInputChange(e) {
+    function handlePetInputChange(e) {
         const target = e.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
-        setNewPetName(value);
+        const name = target.name;
+        const newPetClone = Object.assign({}, newPet);
+        newPetClone[name] = value;
+        console.log(newPetClone);
+        setNewPet(newPetClone);
     }
 
-    function handlePetIdInputChange(e) {
+    function handleCategoryInputChange(e) {
         const target = e.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
-        setNewPetId(value);
-    }
-
-    function handleCategoryNameInputChange(e) {
-        const target = e.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        setNewCategoryName(value);
-    }
-
-    function handleCategoryIdInputChange(e) {
-        const target = e.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        setNewCategoryId(value);
-    }
-
-    function handleStatusInputChange(e) {
-        const target = e.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        setNewPetStatus(value);
+        const name = target.name;
+        const newCategoryClone = Object.assign({}, newCategory);
+        newCategoryClone[name] = value;
+        console.log(newCategoryClone);
+        setNewCategory(newCategoryClone);
     }
 
     function handleCurrencyConverterInputChange(e) {
@@ -55,16 +50,10 @@ const Home = () => {
     function submitPet(e) {
         e.preventDefault();
         console.log('You clicked submit.');
-        const requestPayload = {
-            "id": parseInt(newPetId),
-            "name": newPetName,
-            "category": {
-                "id": parseInt(newCategoryId),
-                "name": newCategoryName
-            },
-            "photoUrls": [],
-            "status": newPetStatus
-        };
+        const requestPayload = Object.assign({}, newPet);
+        requestPayload.id = parseInt(newPet.id);
+        requestPayload.category = Object.assign({}, newCategory);
+        requestPayload.category.id = parseInt(newCategory.id);
         fetch("http://insrsaeu.apigw-aw-eu.webmethods.io/gateway/team1_petstore/1.0.5/pet", {
             method: 'POST',
             headers: {
@@ -151,27 +140,27 @@ const Home = () => {
             <form>
                 <label>
                     Name:
-                    <input type="text" value={newPetName} onChange={handlePetNameInputChange} />
+                    <input type="text" name="name" value={newPet.name} onChange={handlePetInputChange} />
                 </label>
                 <br/>
                 <label>
                     ID:
-                    <input type="text" value={newPetId} onChange={handlePetIdInputChange} />
+                    <input type="text" name="id" value={newPet.id} onChange={handlePetInputChange} />
                 </label>
                 <br/>
                 <label>
                     Category name:
-                    <input type="text" value={newCategoryName} onChange={handleCategoryNameInputChange} />
+                    <input type="text" name="name" value={newCategory.name} onChange={handleCategoryInputChange} />
                 </label>
                 <br/>
                 <label>
                     Category ID:
-                    <input type="text" value={newCategoryId} onChange={handleCategoryIdInputChange} />
+                    <input type="text" name="id" value={newCategory.id} onChange={handleCategoryInputChange} />
                 </label>
                 <br/>
                 <label>
                     Status:
-                    <select value={newPetStatus} onChange={handleStatusInputChange}>
+                    <select name="status" value={newPet.status} onChange={handlePetInputChange}>
                         <option value="available">available</option>
                         <option value="pending">pending</option>
                         <option value="sold">sold</option>
